@@ -1,0 +1,42 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --color-bg: #0c2327;
+  --color-surface: #123237;
+  --color-soft: #18444a;
+  --color-border: #2a5c5f;
+  --color-text: #ecfff8;
+  --color-muted-text: #b6ddd1;
+  --color-primary: #9cff72;
+  --color-accent: #54e0b3;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top right, rgba(156, 255, 114, 0.2), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(84, 224, 179, 0.18), transparent 38%),
+    var(--color-bg);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
