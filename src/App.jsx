@@ -123,9 +123,17 @@ function App() {
       <header className="hero">
         <div className="hero-main">
           <div className="hero-copy">
+            <span className="hero-eyebrow">Portfolio • 2026</span>
             <h1>{profile.name}</h1>
             <p className="hero-text">{profile.role}</p>
             <p className="hero-text">{profile.summary}</p>
+            <div className="hero-about">
+              <p className="hero-about-text">{profile.about}</p>
+            </div>
+            <div className="hero-badges">
+              <span className="badge">Open to internships</span>
+              <span className="badge">Based in Pune, India</span>
+            </div>
             <div className="hero-actions">
               <a className="cta" href="#contact">
                 Contact Me
@@ -145,26 +153,17 @@ function App() {
         </div>
       </header>
 
-      <Section id="about" title="About">
-        <div className="section-surface">
-          <p>{profile.about}</p>
-          <div className="quick-highlights">
-            <span>Computer Vision Projects</span>
-            <span>React Development</span>
-            <span>Hardware–Software Integration</span>
-            <span>Open Source Contribution</span>
-          </div>
-        </div>
-      </Section>
-
       <Section id="education" title="Education">
-        <div className="education-grid">
+        <div className="education-timeline">
           {education.map((edu) => (
-            <article key={edu.institute} className="edu-card">
-              <h3>{edu.institute}</h3>
-              <p>{edu.degree}</p>
-              <p>{edu.score}</p>
-              <span>{edu.year}</span>
+            <article key={edu.institute} className="edu-entry">
+              <span className="edu-marker" aria-hidden="true" />
+              <div className="edu-content">
+                <span className="edu-year">{edu.year}</span>
+                <h3>{edu.institute}</h3>
+                <p className="edu-degree">{edu.degree}</p>
+                <p className="edu-score">{edu.score}</p>
+              </div>
             </article>
           ))}
         </div>
@@ -237,6 +236,12 @@ function App() {
               {profile.github}
             </a>
           </p>
+          <div className="contact-cta">
+            <p>Let’s collaborate on inclusive interfaces or event-tech platforms.</p>
+            <a className="secondary-cta" href="mailto:mishtikinker@gmail.com">
+              Start a conversation
+            </a>
+          </div>
         </div>
       </Section>
     </div>
